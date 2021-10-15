@@ -61,7 +61,7 @@ namespace DotNetNuker
         {
             Invoke((Action)delegate
             {
-                richTextBox1.AppendText(arg.Message + "\n");
+                richTextBox1.AppendText("\n" + "   " + arg.Message + "\n");
             });
                
             return Task.CompletedTask;

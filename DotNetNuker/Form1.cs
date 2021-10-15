@@ -9,7 +9,7 @@ namespace DotNetNuker
 {
     public partial class Form1 : Form
     {
-        DiscordSocketClient Client;
+        public static DiscordSocketClient Client;
         CommandHandler Handler;
         public Form1()
         {
@@ -26,9 +26,9 @@ namespace DotNetNuker
 
             Client = new DiscordSocketClient(new DiscordSocketConfig()
             {
-                LogLevel = LogSeverity.Verbose
-                
-            });
+                LogLevel = LogSeverity.Info
+
+            }) ;
 
            await Handler.Init(Client);
 
@@ -57,7 +57,7 @@ namespace DotNetNuker
         }
 
 
-        private Task Log(LogMessage arg)
+        public Task Log(LogMessage arg)
         {
             Invoke((Action)delegate
             {

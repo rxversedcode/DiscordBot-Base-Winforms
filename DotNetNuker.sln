@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31808.319
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetNuker", "DotNetNuker\DotNetNuker.csproj", "{6C996CFA-E188-4218-879D-8D282885857D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C996CFA-E188-4218-879D-8D282885857D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C996CFA-E188-4218-879D-8D282885857D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C996CFA-E188-4218-879D-8D282885857D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C996CFA-E188-4218-879D-8D282885857D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2D11415-3E9D-4751-8352-E07A8969E0A1}
+	EndGlobalSection
+EndGlobal

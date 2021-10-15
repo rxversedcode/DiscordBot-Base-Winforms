@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Discord;
+using Discord.WebSocket;
+using System;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Discord;
-using Discord.WebSocket;
 
 namespace DotNetNuker
 {
@@ -16,9 +16,7 @@ namespace DotNetNuker
             InitializeComponent();
             this.CenterToScreen();
 
-
         }
-
 
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -28,9 +26,9 @@ namespace DotNetNuker
             {
                 LogLevel = LogSeverity.Info
 
-            }) ;
+            });
 
-           await Handler.Init(Client);
+            await Handler.Init(Client);
 
             try
             {
@@ -44,18 +42,17 @@ namespace DotNetNuker
             catch
             {
                 guna2HtmlLabel2.Text = "Failed.";
-                
+
             }
-            
+
             Client.Log += Log;
-          await  Task.Delay(-1);
+            await Task.Delay(-1);
         }
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-        }
 
+        }
 
         public Task Log(LogMessage arg)
         {
@@ -63,7 +60,7 @@ namespace DotNetNuker
             {
                 richTextBox1.AppendText("\n" + "   " + arg.Message + "\n");
             });
-               
+
             return Task.CompletedTask;
         }
 
@@ -74,12 +71,12 @@ namespace DotNetNuker
 
         private void guna2Separator1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -90,7 +87,7 @@ namespace DotNetNuker
                 guna2HtmlLabel4.Show();
                 this.Size = new Size(736, 408);
                 this.CenterToScreen();
-                
+
             }
             else
             {

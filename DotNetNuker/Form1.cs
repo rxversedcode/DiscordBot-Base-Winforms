@@ -9,38 +9,46 @@ namespace DotNetNuker
 {
     public partial class Form1 : Form
     {
-        DiscordSocketClient _client;
-
+        DiscordSocketClient Client;
+        CommandHandler Handler;
         public Form1()
         {
             InitializeComponent();
+            this.CenterToScreen();
 
-           
+
         }
 
 
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
-            _client = new DiscordSocketClient(new DiscordSocketConfig()
+            Handler = new CommandHandler();
+
+            Client = new DiscordSocketClient(new DiscordSocketConfig()
             {
                 LogLevel = LogSeverity.Verbose
                 
             });
 
+           await Handler.Init(Client);
+
             try
             {
-                await _client.LoginAsync(TokenType.Bot, guna2TextBox1.Text);
-                await _client.StartAsync();
+                await Client.LoginAsync(TokenType.Bot, guna2TextBox1.Text);
+                await Client.StartAsync();
+
+                await Client.SetGameAsync("with your server.");
 
                 guna2HtmlLabel2.Text = "Started!";
             }
             catch
             {
                 guna2HtmlLabel2.Text = "Failed.";
+                
             }
-            _client.MessageReceived += CommandHandler;
-            _client.Log += Log;
-           
+            
+            Client.Log += Log;
+          await  Task.Delay(-1);
         }
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,15 +56,6 @@ namespace DotNetNuker
             
         }
 
-        private Task CommandHandler(SocketMessage message)
-        {
-            if (message.Content == "ping")
-            {
-                
-            }
-            
-            return Task.CompletedTask;
-        }
 
         private Task Log(LogMessage arg)
         {
@@ -89,14 +88,15 @@ namespace DotNetNuker
             {
                 richTextBox1.Show();
                 guna2HtmlLabel4.Show();
-                this.Size = new Size(706, 408);
+                this.Size = new Size(736, 408);
                 this.CenterToScreen();
+                
             }
             else
             {
                 richTextBox1.Hide();
                 guna2HtmlLabel4.Hide();
-                this.Size = new Size(299, 408);
+                this.Size = new Size(284, 408);
                 this.CenterToScreen();
             }
         }

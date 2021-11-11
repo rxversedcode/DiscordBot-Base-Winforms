@@ -44,12 +44,12 @@ namespace DotNetNuker
             this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -72,9 +72,9 @@ namespace DotNetNuker
             this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(25, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(230, 35);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(196, 35);
             this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "rxversed\'s nuker.";
+            this.guna2HtmlLabel1.Text = "rxversed\'s bot.";
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // guna2Button1
@@ -236,6 +236,14 @@ namespace DotNetNuker
             this.guna2Panel1.Size = new System.Drawing.Size(10, 225);
             this.guna2Panel1.TabIndex = 15;
             // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.Location = new System.Drawing.Point(7, 11);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
+            this.guna2Panel6.Size = new System.Drawing.Size(352, 10);
+            this.guna2Panel6.TabIndex = 18;
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.guna2Panel3);
@@ -262,6 +270,14 @@ namespace DotNetNuker
             this.guna2Panel4.Size = new System.Drawing.Size(352, 10);
             this.guna2Panel4.TabIndex = 17;
             // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
+            this.guna2Panel5.Size = new System.Drawing.Size(352, 10);
+            this.guna2Panel5.TabIndex = 18;
+            // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
@@ -271,22 +287,6 @@ namespace DotNetNuker
             this.richTextBox1.Size = new System.Drawing.Size(352, 214);
             this.richTextBox1.TabIndex = 14;
             this.richTextBox1.Text = "";
-            // 
-            // guna2Panel5
-            // 
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
-            this.guna2Panel5.Size = new System.Drawing.Size(352, 10);
-            this.guna2Panel5.TabIndex = 18;
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.Location = new System.Drawing.Point(7, 11);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
-            this.guna2Panel6.Size = new System.Drawing.Size(352, 10);
-            this.guna2Panel6.TabIndex = 18;
             // 
             // guna2Panel7
             // 
@@ -301,7 +301,7 @@ namespace DotNetNuker
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.ClientSize = new System.Drawing.Size(846, 408);
+            this.ClientSize = new System.Drawing.Size(284, 408);
             this.Controls.Add(this.guna2Panel7);
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Panel2);

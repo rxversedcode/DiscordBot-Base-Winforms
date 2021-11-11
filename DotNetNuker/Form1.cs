@@ -24,7 +24,7 @@ namespace DotNetNuker
 
             Client = new DiscordSocketClient(new DiscordSocketConfig()
             {
-                LogLevel = LogSeverity.Info
+                LogLevel = LogSeverity.Debug
 
             });
 
@@ -59,6 +59,7 @@ namespace DotNetNuker
             Invoke((Action)delegate
             {
                 richTextBox1.AppendText("\n" + "   " + arg.Message + "\n");
+                richTextBox1.ScrollToCaret();
             });
 
             return Task.CompletedTask;
